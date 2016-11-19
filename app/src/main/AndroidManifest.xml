@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.sirda.sirdanb"
+    >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.example.gcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home"
+            android:label="SIRDA" />
+        <activity
+            android:name=".AdminLogin"
+            android:label="Admin LogIn"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".aAccount"
+            android:label="Administrator"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".Feedback"
+            android:label="Suggestion"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".Setting"
+            android:label="Setting"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".aCreate"
+            android:label="Create Notice"
+            android:parentActivityName=".aAccount" />
+        <activity
+            android:name=".GetFeedback"
+            android:label="Suggestions"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".NoticeBtech"
+            android:label="B.Tech Notices"
+            android:parentActivityName=".home" />
+        <activity android:name=".NoticeDiploma"
+            android:label="Diploma Notices"
+            android:parentActivityName=".home"/>
+        <activity
+            android:name=".NoticeImage"
+            android:label="Notice"
+            android:parentActivityName=".NoticeBtech" />
+        <activity
+            android:name=".AboutUs"
+            android:label="About Us"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".ContactUs"
+            android:label="Contact Us"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".Developers"
+            android:label="Developers"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".Help"
+            android:label="Help"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".Register"
+            android:label="Subscription"
+            android:parentActivityName=".home" />
+        <activity
+            android:name=".NoticeAdminBtech"
+            android:label="Notices"
+            android:parentActivityName=".aAccount" />
+        <activity
+            android:name=".NoticeAdminDiploma"
+            android:label="Notices"
+            android:parentActivityName=".aAccount" />
+        <activity
+            android:name=".NoticeAdminImageBtech"
+            android:label="Notice"
+            android:parentActivityName=".NoticeAdminBtech" />
+        <activity
+            android:name=".NoticeAdminImageDiploma"
+            android:label="Notice"
+            android:parentActivityName=".NoticeAdminDiploma" />
+
+
+        <activity android:name=".ImageDownload"
+            android:parentActivityName=".NoticeBtech"/>
+
+
+
+
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".RegistrationIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+
+</manifest>

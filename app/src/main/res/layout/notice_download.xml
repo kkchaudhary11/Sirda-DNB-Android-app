@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".activities.ImageActivity">
+
+
+
+    <TextView
+        android:id="@+id/tvDMWorking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Downloading....."
+        android:textColor="#607D8B"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/open"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content"
+        android:text="Open"
+        android:visibility="invisible"
+        android:background="@drawable/mybutton"
+        android:textColor="#ffffff"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/tvDMWorking"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        />
+    <Button
+        android:id="@+id/retry"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content"
+        android:text="retry"
+        android:visibility="invisible"
+        android:background="@drawable/mybutton"
+        android:textColor="#ffffff"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/tvDMWorking"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        />
+
+    <ImageView
+        android:id="@+id/done"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/done"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/wait"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/wait"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        />
+    <ImageView
+        android:id="@+id/error"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/error"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:visibility="invisible"
+
+        />
+    <ImageView
+        android:id="@+id/wrong"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/wrong"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:visibility="invisible"
+
+        />
+</RelativeLayout>
